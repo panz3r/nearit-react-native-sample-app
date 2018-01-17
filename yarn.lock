@@ -2744,9 +2744,9 @@ react-devtools-core@3.0.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-nearit@^2.5.6-beta.1:
-  version "2.5.6-beta.1"
-  resolved "https://registry.yarnpkg.com/react-native-nearit/-/react-native-nearit-2.5.6-beta.1.tgz#f4a0b91eb2db27b6c8cb89997672304725790b25"
+react-native-nearit@^2.5.6-beta.2:
+  version "2.5.6-beta.2"
+  resolved "https://registry.yarnpkg.com/react-native-nearit/-/react-native-nearit-2.5.6-beta.2.tgz#f7abc1c137aa8e95028aa5e55959d3d1712aa294"
   dependencies:
     glob "^7.1.2"
 
