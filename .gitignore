@@ -61,3 +61,4 @@ NearIt.plist
 secrets.xml
 release.keystore.properties
 google-services.json
+fastlane/report.xml
