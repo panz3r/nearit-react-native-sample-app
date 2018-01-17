@@ -1,7 +1,9 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
-const Card = ({ children }) => <View style={styles.card}>{children}</View>
+export const Card = ({ children }) => (
+  <View style={styles.card}>{children}</View>
+)
 
 const styles = StyleSheet.create({
   card: {
@@ -14,5 +16,3 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 })
-
-export default Card

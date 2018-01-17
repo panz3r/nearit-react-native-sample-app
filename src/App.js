@@ -15,7 +15,8 @@ import contentNotificationIcon from './assets/icona-notificaecontenuto.png'
 import couponNotificationIcon from './assets/icona-couponsconto.png'
 import feedbackNotificationIcon from './assets/icona-questionario.png'
 import customJsonNotificationIcon from './assets/icon-code.png'
-import feedback from './pages/feedback'
+
+import { FeedbackModal } from './nearit-ui-bindings/feedback'
 
 const { Events, EventContent, Permissions, Statuses } = NearItConstants
 
@@ -125,13 +126,9 @@ class App extends React.Component {
   }
 
   _showFeedback = (feedback, trackingInfo) => {
-    const { feedbackId, feedbackQuestion } = feedback
     this.setState({
       showFeedback: true,
-      feedback: {
-        id: feedbackId,
-        question: feedbackQuestion
-      }
+      feedback
     })
   }
 
@@ -179,18 +176,16 @@ class App extends React.Component {
         </Dialog>
 
         {showFeedback && (
-          <Feedback
-            feedbackId={feedback.id}
-            feedbackQuestion={feedback.question}
+          <FeedbackModal
+            feedback={feedback}
             onFeedbackSent={this._onFeedbackSent}
           />
         )}
-        {!showFeedback && (
-          <View style={styles.body}>
-            {pageIndex === 0 && <Home showMessage={this._showMessage} />}
-            {pageIndex === 1 && <User showMessage={this._showMessage} />}
-          </View>
-        )}
+
+        <View style={styles.body}>
+          {pageIndex === 0 && <Home showMessage={this._showMessage} />}
+          {pageIndex === 1 && <User showMessage={this._showMessage} />}
+        </View>
 
         <BottomNavBar>
           {this.sections.map((v, i) => (

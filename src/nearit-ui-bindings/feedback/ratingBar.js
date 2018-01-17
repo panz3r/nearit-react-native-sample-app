@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 
-const starIcon = require('../assets/star.png')
-const emptyStarIcon = require('../assets/emptyStar.png')
+const starIcon = require('./assets/star.png')
+const emptyStarIcon = require('./assets/emptyStar.png')
 
 const RatingBar = ({ rating, onRating, style }) => (
   <View style={[styles.ratingContainer, style]}>
